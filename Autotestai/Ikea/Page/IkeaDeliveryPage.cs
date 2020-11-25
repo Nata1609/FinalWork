@@ -22,11 +22,6 @@ namespace Autotestai.Ikea
         private IWebElement DeliverySumCountButton => Driver.FindElement(By.CssSelector("#district-form > div > div.col-4.d-flex.align-items-end > button"));
         private IWebElement DeliverySumCountInputButton => Driver.FindElement(By.CssSelector(".select2-search__field"));
         private IWebElement ResultDeliverySum => Driver.FindElement(By.Id("txtDeliveryCost_shoppingcart"));
-        
-       
-        
-
-
         public IkeaDeliveryPage(IWebDriver webdriver) : base(webdriver)
         { }
 
