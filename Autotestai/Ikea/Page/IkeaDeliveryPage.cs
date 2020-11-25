@@ -21,7 +21,7 @@ namespace Autotestai.Ikea
         private IWebElement PostCodeBox => Driver.FindElement(By.CssSelector(".select2-selection__placeholder"));
         private IWebElement DeliverySumCountButton => Driver.FindElement(By.CssSelector("#district-form > div > div.col-4.d-flex.align-items-end > button"));
         private IWebElement DeliverySumCountInputButton => Driver.FindElement(By.CssSelector(".select2-search__field"));
-        private IWebElement ResultDeliverySum => Driver.FindElement(By.Id("txtDeliveryCost_shoppingcart"));
+        private IWebElement ResultDeliverySum => Driver.FindElement(By.CssSelector("#payment > div.secure-box.col-12.col-lg-5.offset-lg-2.order-lg-2.order-1 > div.summaryDetails > div.summary > div > div:nth-child(2) > div > div.col-4 > p"));
         public IkeaDeliveryPage(IWebDriver webdriver) : base(webdriver)
         { }
 
