@@ -69,7 +69,6 @@ namespace Autotestai.Ikea
 
         public IkeaDeliveryPage VerifyResultDeliverySum(string deliverySum)
         {
-           
             string finalResultDeliverySum = ResultDeliverySum.Text;
             Assert.That(finalResultDeliverySum, Is.EqualTo(deliverySum),"No, the price for delivery is wrong");
             return this;
