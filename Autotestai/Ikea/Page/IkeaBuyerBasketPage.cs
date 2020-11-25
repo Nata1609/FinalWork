@@ -25,12 +25,13 @@ namespace Autotestai.Ikea
         private IWebElement GoToBuyerBasketButton => Driver.FindElement(By.CssSelector(".goToCart > span:nth-child(1)"));
         private IWebElement TotalItemsCount => Driver.FindElement(By.CssSelector(".py-3 > span:nth-child(1)"));
         private IWebElement TotalItemsMoneyToPay => Driver.FindElement(By.CssSelector("#cart > div.text-center.py-3 > b"));
-        IWebElement Item1Price => Driver.FindElement(By.CssSelector(".itemNormalPrice"));
-        IWebElement Item1Count => Driver.FindElement(By.CssSelector(".col-12:nth-child(5) .val"));
-        IWebElement Item1Amount => Driver.FindElement(By.CssSelector(".col-12:nth-child(5) strong"));
-        IWebElement Item2Price => Driver.FindElement(By.CssSelector(".item:nth-child(2) > .row"));
-        IWebElement Item2Count => Driver.FindElement(By.CssSelector(".col-12:nth-child(4) .val"));
-        IWebElement Item2Amount => Driver.FindElement(By.CssSelector(".col-12:nth-child(4) strong"));
+        private IWebElement Item1Price => Driver.FindElement(By.CssSelector(".itemNormalPrice"));
+        private IWebElement Item1Count => Driver.FindElement(By.CssSelector(".col-12:nth-child(5) .val"));
+        private IWebElement Item1Amount => Driver.FindElement(By.CssSelector(".col-12:nth-child(5) strong"));
+        private IWebElement Item2Price => Driver.FindElement(By.CssSelector(".item:nth-child(2) > .row"));
+        private IWebElement Item2Count => Driver.FindElement(By.CssSelector(".col-12:nth-child(4) .val"));
+        private IWebElement Item2Amount => Driver.FindElement(By.CssSelector(".col-12:nth-child(4) strong"));
+        
         public IkeaBuyerBasketPage(IWebDriver webdriver) : base(webdriver)
         { }
         public IkeaBuyerBasketPage NavigateToDefaltPage()
