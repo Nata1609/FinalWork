@@ -58,13 +58,12 @@ namespace Autotestai.Ikea
         public IkeaDeliveryPage PutThePostCode(string postCode)
         {
             PostCodeBox.Click();
-            DeliverySumCountInputButton.SendKeys(postCode);
-            WebDriverWait wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(10));
-            wait.Until(ExpectedConditions.ElementToBeClickable(DeliverySumCountButton));
+            DeliverySumCountInputBox.SendKeys(postCode);
+            Actions action = new Actions(Driver);
+            action.SendKeys(DeliverySumCountInputBox, Keys.Enter).Build().Perform();
+            Thread.Sleep(2000);
             DeliverySumCountButton.Click();
-            WebDriverWait wait1 = new WebDriverWait(Driver, TimeSpan.FromSeconds(15));
-            wait1.Until(ExpectedConditions.ElementToBeClickable(DeliverySumCountButton));
-            DeliverySumCountButton.Click();
+            Thread.Sleep(2000);
             return this;
         }
 
