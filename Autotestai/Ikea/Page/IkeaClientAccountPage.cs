@@ -13,11 +13,11 @@ namespace Autotestai.Page
 {
     public class IkeaClientAccountPage : BasePage
     {
-        private string personalName = "Natalia";
-        private string personalSurname = "Ulbaeva";
-        private string clientEmail = "ulbajchik@gmail.com";
-        private string clientPassword = "giavMo";
-
+        private string personalName = "Eduard";
+        private string personalSurname = "Eduard";
+        private string clientEmail = "eduardtest4@gmail.com";
+        private string clientPassword = "passpass";
+        
         private const string PageAddress = "https://www.ikea.lt/lt/client";
         private IWebElement EmailBox => Driver.FindElement(By.Id("loginForm_email"));
         private IWebElement PasswordBox => Driver.FindElement(By.Id("loginForm_password"));
