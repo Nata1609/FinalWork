@@ -25,7 +25,6 @@ namespace Autotestai.Ikea
         
         public IkeaDeliveryPage(IWebDriver webdriver) : base(webdriver)
         { }
-
         public IkeaDeliveryPage NavigateToDefaltPage()
         {
             if (Driver.Url != PageAddress)
@@ -45,7 +44,6 @@ namespace Autotestai.Ikea
             Driver.Navigate().Refresh();
             return this;
         }
-
         public IkeaDeliveryPage PutIntoBuyerBasket()
         {
             PutToBusketButton.Click();
@@ -54,7 +52,6 @@ namespace Autotestai.Ikea
             GoToBuyerBasketButton.Click();
             return this;
         }
-
         public IkeaDeliveryPage PutThePostCode(string postCode)
         {
             PostCodeBox.Click();
@@ -66,7 +63,6 @@ namespace Autotestai.Ikea
             Thread.Sleep(2000);
             return this;
         }
-
         public IkeaDeliveryPage VerifyResultDeliverySum(string deliverySum)
         {
             string finalResultDeliverySum = ResultDeliverySum.Text;
